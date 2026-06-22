@@ -4,7 +4,7 @@ import { Cpu, Terminal, Gamepad2, X, Briefcase, User, Github, Linkedin, Mail, Ch
 import { useWindowSize } from './hooks/useWindowSize';
 
 // --- CONFIGURACIÓN DE MEDIOS ---
-const PHOTO_URL = "/NICO.png";
+const PHOTO_URL = "./NICO.png";
 
 // --- CONFIGURACIÓN FÍSICAS ---
 const BASE_SPEED = 9;
@@ -135,9 +135,9 @@ const createPROJECTS = (t, lang) => [
     icon: '/PokeRatIco.png',
     iconPlaceholder: <Terminal size={24} />,
     media: [
-      { type: 'image', url: '/PokeRat1.png' },
-      { type: 'image', url: '/PokeRat2.png' },
-      { type: 'image', url: '/PokeRat3.png' }
+      { type: 'image', url: './PokeRat1.png' },
+      { type: 'image', url: './PokeRat2.png' },
+      { type: 'image', url: './PokeRat3.png' }
     ]
   },
   {
@@ -167,8 +167,8 @@ const createPROJECTS = (t, lang) => [
     icon: null,
     iconPlaceholder: <Terminal size={24} />,
     media: [
-      { type: 'image', url: '/SmarTrack1.png' },
-      { type: 'image', url: '/SmarTrack2.png' }
+      { type: 'image', url: './SmarTrack1.png' },
+      { type: 'image', url: './SmarTrack2.png' }
     ]
   }
 ];
