@@ -34,110 +34,114 @@ export const UI = {
 export const CONTENT = {
   es: {
     hero_title: 'NICOLÁS DÍAZ ULLOA',
-    hero_subtitle: 'Game Dev · IA · Redes y Sistemas',
+    hero_subtitle: 'Videojuegos · IA · Redes y sistemas',
     hero_content:
-      'Técnico de redes en una planta industrial de ALCOA y, fuera de horas, desarrollador de videojuegos y de apps con IA. ' +
-      'Estudio los últimos créditos de Ingeniería Informática (Universidad de Oviedo). Configuro switches y puntos de acceso Cisco industriales por el día ' +
-      'y por la noche monto juegos en Godot, Unity y C++, automatizaciones y prototipos de visión por computador, todo en repositorios públicos (35+) ' +
-      'y desplegado en mi propio VPS. Aprendo rápido, depuro con paciencia y orquesto agentes de IA en mi flujo diario: varias sesiones con roles distintos, reglas en el repo y validación automática antes de cada merge.',
-    hero_tags: ['Godot', 'Unity', 'C++', 'Agentes de IA', 'Orquestación', 'Automatización', 'Redes Cisco', 'Linux / VPS'],
+      'Soy el técnico de redes y sistemas de Cotelsa en la fábrica de Alcoa de San Ciprián: por las mañanas dejo la red de la planta funcionando y por las tardes hago videojuegos y proyectos con IA. ' +
+      'Estoy terminando Ingeniería Informática en la Universidad de Oviedo y tengo más de 35 repositorios públicos: juegos en Godot, Unity y C++, automatizaciones y algún experimento de visión por computador. ' +
+      'Trabajo con agentes de IA a diario y me gusta aprender lo que haga falta para sacar las cosas adelante.',
+    hero_tags: ['Godot', 'Unity', 'C++', 'Agentes de IA', 'Orquestación', 'Automatización', 'Redes Cisco', 'Active Directory', 'Linux / VPS'],
 
     experience_title: 'EXPERIENCIA',
-    experience_subtitle: 'Trabajo y prácticas',
+    experience_subtitle: 'Dónde he trabajado',
     experience: [
       {
-        name: 'TÉCNICO DE REDES · COTELSA (subcontrata de ALCOA)',
-        period: 'Lugo · 2026 – Actualidad',
+        name: 'TÉCNICO DE REDES Y SISTEMAS · COTELSA',
+        period: 'Alcoa San Ciprián, Lugo · 2026 – actualidad',
         list: [
-          'Configuración y pruebas de equipamiento de red industrial: switches Cisco serie IE por consola y puntos de acceso Wi-Fi industriales Cisco.',
-          'Puesta en marcha y validación de un punto de acceso en modo workgroup bridge (VLAN, direccionamiento de gestión, antena) con comprobación de conectividad extremo a extremo.',
-          'Adaptación de ficheros de configuración existentes a equipos nuevos.',
+          'Cotelsa da soporte a la gestión eléctrica de la fábrica de Alcoa. Yo llevo toda la parte informática: red, sistemas y equipos.',
+          'Instalo en planta switches, controladoras y puntos de acceso Wi-Fi Cisco industriales, que antes dejo configurados y probados (VLAN, direccionamiento, modo workgroup bridge).',
+          'Administro las cuentas, los permisos y los equipos de la fábrica con Active Directory.',
+          'Preparo PCs para uso industrial: les instalo el sistema, los configuro y, si hace falta, les cambio el hardware aprovechando material que ya hay por la planta.',
+          'Participo en la conexión de red entre las plantas de Alcoa.',
         ],
       },
       {
         name: 'TÉCNICO DE INFRAESTRUCTURA IT · UNIVERSIDAD DE OVIEDO',
-        period: 'EPI Gijón · Nov 2025 – Jun 2026',
+        period: 'EPI Gijón · nov 2025 – jun 2026',
         list: [
-          'Resolución de incidencias de hardware, red y software en el entorno académico.',
-          'Automatización con Python y Bash de instalaciones de sistema operativo y puesta a punto de entornos, sustituyendo procesos manuales por scripts versionados.',
-          'Despliegue y mantenimiento de máquinas virtuales en redes locales.',
+          'Resolvía incidencias de hardware, red y software del día a día.',
+          'Automaticé con Python y Bash las instalaciones de sistema operativo y la preparación de equipos, que antes se hacían a mano.',
+          'Desplegué y mantuve máquinas virtuales en redes locales.',
         ],
       },
       {
         name: 'DATA ENGINEERING Y AUTOMATIZACIÓN · RAIOLA NETWORKS',
-        period: 'Prácticas · Jun – Sep 2024',
+        period: 'Prácticas · jun – sep 2024',
         list: [
-          'Pipelines de datos con Python y n8n; APIs REST y webhooks.',
-          'Sistema de fine-tuning + RAG para reproducir el estilo de comunicación de la dirección: extracción masiva con plugins PHP de WordPress, flujos de Make.com y transcripción automática de YouTube.',
+          'Pipelines de datos con Python y n8n, con APIs REST y webhooks.',
+          'Monté un sistema de fine-tuning y RAG para imitar el estilo de comunicación de la dirección, sacando el contenido con plugins de WordPress en PHP, flujos de Make.com y transcripciones automáticas de YouTube.',
         ],
       },
     ],
 
     systems_title: 'REDES Y SISTEMAS',
-    systems_subtitle: 'Lo que hago en la planta',
+    systems_subtitle: 'Mi trabajo en la planta',
     systems_content:
-      'Trabajo con red industrial real: la que mantiene una fábrica funcionando. Me muevo con soltura entre la consola del switch, el servidor Linux y el script que automatiza lo repetitivo. ' +
-      'Esa mezcla es la que luego aplico a mis propios proyectos: mi infraestructura es un VPS que administro yo mismo.',
+      'En una fábrica la red no puede fallar, y de que no falle me encargo yo. Me muevo igual de cómodo con la consola de un switch que con Active Directory, con un PC al que hay que ponerle el sistema o con un script que ahorra horas de trabajo repetido. ' +
+      'Esa mezcla de planta y programación es lo que me diferencia y lo que luego uso en mis propios proyectos.',
     systems_cards: [
-      { name: 'RED INDUSTRIAL', list: 'Cisco IE (switches), Wi-Fi industrial Cisco, workgroup bridge, VLAN, direccionamiento, consola serie (PuTTY).' },
-      { name: 'SISTEMAS', list: 'Linux/Bash, máquinas virtuales, instalaciones automatizadas de SO, resolución de incidencias.' },
-      { name: 'DEVOPS PERSONAL', list: 'VPS propio con Docker, Nginx y Compose; cPanel; GitHub Actions para desplegar.' },
-      { name: 'AUTOMATIZACIÓN', list: 'Python, n8n, Make.com, webhooks y APIs REST para integrar sistemas.' },
+      { name: 'RED INDUSTRIAL', list: 'Instalación y configuración de switches, controladoras y puntos de acceso Cisco: VLAN, direccionamiento, workgroup bridge y pruebas de conectividad.' },
+      { name: 'ACTIVE DIRECTORY', list: 'Cuentas, permisos y equipos de toda la fábrica.' },
+      { name: 'EQUIPOS INDUSTRIALES', list: 'Preparo PCs para planta: sistema operativo, ajustes y reutilización de hardware que ya hay por allí.' },
+      { name: 'ENLACE ENTRE PLANTAS', list: 'Conexión de red entre las distintas plantas de Alcoa.' },
+      { name: 'AUTOMATIZACIÓN', list: 'Scripts en Python y Bash, n8n, Make y webhooks para quitarme de encima lo repetitivo.' },
+      { name: 'MI PROPIO SERVIDOR', list: 'Un VPS que administro yo, con Docker, Nginx y GitHub Actions, donde despliego mis proyectos.' },
     ],
 
     stack_title: 'STACK',
-    stack_subtitle: 'Tecnologías y herramientas',
+    stack_subtitle: 'Con qué trabajo',
     stack: [
-      { name: 'VIDEOJUEGOS', list: 'Godot 4 (GDScript, multijugador ENet/RPC), Unity (C#), C++17/20 con raylib, diseño de sistemas y herramientas de nivel.' },
-      { name: 'IA', list: 'Orquestación de agentes de código (Claude Code, Codex, Cursor) con roles separados, flujos agénticos, automatización (n8n, Make, webhooks), RAG y fine-tuning, visión por computador (OpenCV, MediaPipe).' },
-      { name: 'WEB Y APPS', list: 'React, TypeScript, Three.js, Tailwind, Flutter, SwiftUI, PHP/WordPress (plugins propios), Appwrite, PocketBase.' },
-      { name: 'REDES', list: 'Cisco industrial, VLAN, Wi-Fi corporativo, TCP/IP, troubleshooting.' },
-      { name: 'BACKEND Y DATOS', list: 'Python, Java/Spring Boot, SQL, Node/Express, n8n y Make.com.' },
-      { name: 'INFRA', list: 'Linux, Docker, Nginx, Git/GitHub Actions, VPS, cPanel.' },
+      { name: 'VIDEOJUEGOS', list: 'Godot 4 (GDScript y multijugador con ENet/RPC), Unity (C#), C++17/20 con raylib, diseño de sistemas y herramientas de niveles.' },
+      { name: 'IA', list: 'Orquestación de agentes de código (Claude Code, Codex, Cursor) con roles separados, automatización con n8n, Make y webhooks, RAG, fine-tuning y visión por computador (OpenCV, MediaPipe).' },
+      { name: 'WEB Y APPS', list: 'React, TypeScript, Three.js, Tailwind, Flutter, SwiftUI y PHP/WordPress con plugins propios. Appwrite y PocketBase de backend.' },
+      { name: 'REDES', list: 'Cisco industrial, VLAN, Wi-Fi, TCP/IP y diagnóstico de problemas.' },
+      { name: 'SISTEMAS', list: 'Active Directory, Linux, Bash, máquinas virtuales y puesta a punto de equipos.' },
+      { name: 'BACKEND E INFRA', list: 'Python, Java/Spring Boot, SQL, Node, Docker, Nginx, Git y GitHub Actions.' },
     ],
 
     projects_title: 'PROYECTOS',
     projects_subtitle: 'Juegos, IA, apps y sistemas',
     projects_content:
-      'Más de 30 repositorios públicos. Son prototipos que se pueden abrir y ejecutar, no copias de tutoriales. Los juegos van primero: es lo que más disfruto construyendo.',
+      'Más de 30 repositorios públicos. Son prototipos que se pueden abrir y ejecutar, no copias de tutoriales. Los juegos van primero porque es lo que más disfruto haciendo.',
 
     why_title: 'POR QUÉ YO',
-    why_subtitle: 'Un perfil poco habitual en planta',
+    why_subtitle: 'Un perfil poco común en una planta',
     why_content:
-      'Entiendo la red industrial y también sé programar el software que la rodea. ' +
-      'Aprendo rápido (varios motores y lenguajes en proyectos reales), busco la causa de los fallos en lugar de parchearlos y me gusta trabajar en equipo. ' +
-      'Sé orquestar agentes de IA como herramienta de trabajo: darles roles, ponerles reglas, revisar lo que generan y detectar cuándo se equivocan. ' +
-      'Disponible para trabajo remoto o presencial en Galicia, Asturias y Madrid.',
+      'Entiendo la red de una fábrica y también sé programar lo que la rodea, así que puedo resolver un problema tanto en el armario del switch como en el código. ' +
+      'Aprendo rápido, busco el porqué de los fallos en lugar de taparlos y me encuentro a gusto trabajando en equipo. ' +
+      'La IA es una herramienta más de mi día a día: sé darle instrucciones claras, revisar lo que hace y darme cuenta cuando se equivoca. ' +
+      'Estoy disponible en Galicia, Asturias y Madrid, o en remoto.',
     why_tags: ['Resolutivo', 'Aprendo rápido', 'Trabajo en equipo', 'Proactivo', 'Polifacético'],
   },
   en: {
     hero_title: 'NICOLÁS DÍAZ ULLOA',
-    hero_subtitle: 'Game Dev · AI · Networks & Systems',
+    hero_subtitle: 'Games · AI · Networks & systems',
     hero_content:
-      'Network technician at an ALCOA industrial plant and, off the clock, a game developer and AI app builder. ' +
-      'Finishing my Computer Engineering degree (University of Oviedo). By day I configure industrial Cisco switches and access points; ' +
-      'by night I build games in Godot, Unity and C++, automations and computer vision prototypes, all in public repositories (35+) ' +
-      'and deployed on my own VPS. I learn fast, debug patiently, and I orchestrate AI agents in my daily workflow: several sessions with different roles, rules in the repo and automatic validation before every merge.',
-    hero_tags: ['Godot', 'Unity', 'C++', 'AI agents', 'Orchestration', 'Automation', 'Cisco networks', 'Linux / VPS'],
+      'I am the network and systems technician for Cotelsa at the Alcoa plant in San Ciprián: in the mornings I keep the plant network running, and in the afternoons I build games and AI projects. ' +
+      'I am finishing my Computer Engineering degree at the University of Oviedo and have more than 35 public repositories: games in Godot, Unity and C++, automations and a few computer vision experiments. ' +
+      'I work with AI agents every day and I like learning whatever it takes to get things done.',
+    hero_tags: ['Godot', 'Unity', 'C++', 'AI agents', 'Orchestration', 'Automation', 'Cisco networks', 'Active Directory', 'Linux / VPS'],
 
     experience_title: 'EXPERIENCE',
-    experience_subtitle: 'Work and internships',
+    experience_subtitle: 'Where I have worked',
     experience: [
       {
-        name: 'NETWORK TECHNICIAN · COTELSA (ALCOA subcontractor)',
-        period: 'Lugo, Spain · 2026 – Present',
+        name: 'NETWORK AND SYSTEMS TECHNICIAN · COTELSA',
+        period: 'Alcoa San Ciprián, Lugo · 2026 – present',
         list: [
-          'Configuring and testing industrial network equipment: Cisco IE-series switches over console and Cisco industrial Wi-Fi access points.',
-          'Set up and validated a workgroup-bridge access point (VLAN, management addressing, antenna) and verified end-to-end connectivity.',
-          'Adapting existing switch configuration files to new devices.',
+          'Cotelsa supports the electrical management of the Alcoa plant. I handle everything IT: network, systems and equipment.',
+          'I install industrial Cisco switches, controllers and Wi-Fi access points on the plant floor, after configuring and testing them beforehand (VLANs, addressing, workgroup bridge mode).',
+          'I manage the plant’s accounts, permissions and machines with Active Directory.',
+          'I prepare PCs for industrial use: I install the OS, configure them and, when needed, rework their hardware using parts already available around the plant.',
+          'I take part in the network link between Alcoa’s plants.',
         ],
       },
       {
         name: 'IT INFRASTRUCTURE TECHNICIAN · UNIVERSITY OF OVIEDO',
         period: 'EPI Gijón · Nov 2025 – Jun 2026',
         list: [
-          'Solved day-to-day hardware, network and software issues in the academic environment.',
-          'Used Python and Bash to automate OS installs and environment setup, replacing manual procedures with version-controlled scripts.',
+          'Handled day-to-day hardware, network and software issues.',
+          'Used Python and Bash to automate OS installs and machine setup that used to be done by hand.',
           'Deployed and maintained virtual machines on local networks.',
         ],
       },
@@ -145,47 +149,49 @@ export const CONTENT = {
         name: 'DATA ENGINEERING & AUTOMATION · RAIOLA NETWORKS',
         period: 'Internship · Jun – Sep 2024',
         list: [
-          'Data pipelines with Python and n8n; REST APIs and webhooks.',
-          'Fine-tuning + RAG system to reproduce the management team’s communication style: bulk extraction through WordPress PHP plugins, Make.com flows and automatic YouTube transcription.',
+          'Data pipelines with Python and n8n, using REST APIs and webhooks.',
+          'Built a fine-tuning and RAG system to mimic the management team’s communication style, pulling content through WordPress PHP plugins, Make.com flows and automatic YouTube transcripts.',
         ],
       },
     ],
 
     systems_title: 'NETWORKS & SYSTEMS',
-    systems_subtitle: 'What I do on the plant floor',
+    systems_subtitle: 'My work on the plant floor',
     systems_content:
-      'I work with real industrial networking: the kind that keeps a factory running. I move comfortably between the switch console, the Linux server and the script that automates the repetitive part. ' +
-      'That mix is what I bring to my own projects: my infrastructure is a VPS I administer myself.',
+      'In a factory the network cannot go down, and keeping it up is my job. I am just as comfortable with a switch console as with Active Directory, a PC that needs an OS or a script that saves hours of repetitive work. ' +
+      'That mix of plant floor and programming is what sets me apart, and it is what I bring to my own projects.',
     systems_cards: [
-      { name: 'INDUSTRIAL NETWORK', list: 'Cisco IE switches, Cisco industrial Wi-Fi, workgroup bridge, VLANs, addressing, serial console (PuTTY).' },
-      { name: 'SYSTEMS', list: 'Linux/Bash, virtual machines, automated OS installs, incident troubleshooting.' },
-      { name: 'PERSONAL DEVOPS', list: 'Own VPS with Docker, Nginx and Compose; cPanel; GitHub Actions to deploy.' },
-      { name: 'AUTOMATION', list: 'Python, n8n, Make.com, webhooks and REST APIs to integrate systems.' },
+      { name: 'INDUSTRIAL NETWORK', list: 'Installing and configuring Cisco switches, controllers and access points: VLANs, addressing, workgroup bridge and connectivity testing.' },
+      { name: 'ACTIVE DIRECTORY', list: 'Accounts, permissions and machines across the whole plant.' },
+      { name: 'INDUSTRIAL PCs', list: 'Preparing PCs for the plant: operating system, setup and reusing hardware already on site.' },
+      { name: 'PLANT-TO-PLANT LINK', list: 'Network connection between Alcoa’s different plants.' },
+      { name: 'AUTOMATION', list: 'Python and Bash scripts, n8n, Make and webhooks to get rid of repetitive work.' },
+      { name: 'MY OWN SERVER', list: 'A VPS I run myself, with Docker, Nginx and GitHub Actions, where I deploy my projects.' },
     ],
 
     stack_title: 'STACK',
-    stack_subtitle: 'Technologies & tools',
+    stack_subtitle: 'What I work with',
     stack: [
-      { name: 'GAME DEV', list: 'Godot 4 (GDScript, ENet/RPC multiplayer), Unity (C#), C++17/20 with raylib, systems design and level tooling.' },
-      { name: 'AI', list: 'Orchestration of coding agents (Claude Code, Codex, Cursor) with separate roles, agentic workflows, automation (n8n, Make, webhooks), RAG and fine-tuning, computer vision (OpenCV, MediaPipe).' },
-      { name: 'WEB & APPS', list: 'React, TypeScript, Three.js, Tailwind, Flutter, SwiftUI, PHP/WordPress (own plugins), Appwrite, PocketBase.' },
-      { name: 'NETWORKING', list: 'Industrial Cisco, VLANs, enterprise Wi-Fi, TCP/IP, troubleshooting.' },
-      { name: 'BACKEND & DATA', list: 'Python, Java/Spring Boot, SQL, Node/Express, n8n and Make.com.' },
-      { name: 'INFRA', list: 'Linux, Docker, Nginx, Git/GitHub Actions, VPS, cPanel.' },
+      { name: 'GAME DEV', list: 'Godot 4 (GDScript and ENet/RPC multiplayer), Unity (C#), C++17/20 with raylib, systems design and level tooling.' },
+      { name: 'AI', list: 'Orchestrating coding agents (Claude Code, Codex, Cursor) with separate roles, automation with n8n, Make and webhooks, RAG, fine-tuning and computer vision (OpenCV, MediaPipe).' },
+      { name: 'WEB & APPS', list: 'React, TypeScript, Three.js, Tailwind, Flutter, SwiftUI and PHP/WordPress with my own plugins. Appwrite and PocketBase on the backend.' },
+      { name: 'NETWORKING', list: 'Industrial Cisco, VLANs, Wi-Fi, TCP/IP and troubleshooting.' },
+      { name: 'SYSTEMS', list: 'Active Directory, Linux, Bash, virtual machines and machine setup.' },
+      { name: 'BACKEND & INFRA', list: 'Python, Java/Spring Boot, SQL, Node, Docker, Nginx, Git and GitHub Actions.' },
     ],
 
     projects_title: 'PROJECTS',
     projects_subtitle: 'Games, AI, apps and systems',
     projects_content:
-      '30+ public repositories. They are prototypes you can open and run, not tutorial copies. Games come first: it is what I enjoy building the most.',
+      'More than 30 public repositories. They are prototypes you can open and run, not tutorial copies. Games come first because they are what I enjoy building most.',
 
     why_title: 'WHY ME',
-    why_subtitle: 'An unusual profile for a plant',
+    why_subtitle: 'An uncommon profile for a plant',
     why_content:
-      'I understand industrial networking and I can also write the software around it. ' +
-      'I learn fast (several engines and languages in real projects), I look for the cause of a fault instead of patching it, and I like working in a team. ' +
-      'I know how to orchestrate AI agents as a working tool: give them roles and rules, review what they produce and tell when they are wrong. ' +
-      'Available remote or on-site in Galicia, Asturias and Madrid.',
+      'I understand a factory network and I can also write the software around it, so I can solve a problem in the switch cabinet or in the code. ' +
+      'I learn fast, I look for why things fail instead of patching over them, and I enjoy working in a team. ' +
+      'AI is just another tool in my day to day: I know how to give it clear instructions, review what it does and notice when it gets things wrong. ' +
+      'I am available in Galicia, Asturias and Madrid, or remotely.',
     why_tags: ['Problem solver', 'Fast learner', 'Team player', 'Proactive', 'Polymath'],
   },
 };
@@ -327,8 +333,8 @@ export const PROJECTS = [
     id: 'agents', group: 'ai', featured: true, title: 'Orquestación de agentes', status: 'used', category: 'Agentic workflow',
     short: L('Cómo trabajo: varios agentes de IA con roles separados, coordinados por convenciones del repo.',
              'How I work: several AI agents with separate roles, coordinated by repo conventions.'),
-    desc: L('Mi forma de desarrollar mis juegos y apps: dirijo agentes de código en sesiones con roles distintos (por ejemplo una de código y otra de dirección de arte) y las coordino con convenciones dentro del repositorio. No es "pedirle cosas a un chat": hay reglas, validación automática y revisión mía antes de cada merge.',
-            'How I build my games and apps: I direct coding agents in sessions with different roles (for example one for code and another for art direction) and coordinate them through conventions inside the repository. It is not just asking a chat: there are rules, automatic validation and my own review before every merge.'),
+    desc: L('Así desarrollo mis juegos y apps: trabajo con varios agentes de código a la vez, cada uno con su papel (uno programa, otro hace de director de arte), y los coordino con reglas dentro del propio repositorio. No es pedirle cosas a un chat: hay reglas, validación automática y la última palabra la tengo yo antes de cada merge.',
+            'This is how I build my games and apps: I run several coding agents at once, each with its own role (one writes code, another acts as art director), and coordinate them with rules kept inside the repository. It is not just asking a chatbot for things: there are rules, automatic validation, and I have the final say before every merge.'),
     tech: [L('Ficheros de reglas por repo (CLAUDE.md) y documentos de diseño con cada decisión marcada como DECIDIDO, PROPUESTA o ABIERTO, para que cada agente sepa qué es firme.', 'Per-repo rules files (CLAUDE.md) and design documents with every decision marked DECIDED, PROPOSED or OPEN, so each agent knows what is firm.'),
            L('Validación automática en Godot headless (import y arranque sin errores) antes de cada push, y pruebas de estrés con métricas.', 'Automatic validation in headless Godot (import and error-free boot) before every push, plus stress tests with metrics.'),
            L('Ramas por fase y merge manual a main: la IA propone, yo reviso y decido.', 'One branch per phase and manual merge to main: the AI proposes, I review and decide.'),
@@ -339,8 +345,8 @@ export const PROJECTS = [
     id: 'automation', group: 'ai', featured: true, title: 'Automatización con IA', status: 'used', category: 'n8n · Make · Webhooks',
     short: L('Pipelines con n8n, Make.com, webhooks y Python que conectan sistemas y mueven datos solos.',
              'Pipelines with n8n, Make.com, webhooks and Python that connect systems and move data on their own.'),
-    desc: L('Flujos de automatización que enlazan plataformas sin tocarlas a mano: webhooks que disparan escenarios en n8n y Make, scripts Python propios y plugins de WordPress en PHP hechos por mí como origen de los datos. Lo usé en Raiola para extraer contenido de forma masiva y alimentar un sistema RAG y de fine-tuning.',
-            'Automation flows that link platforms without touching them by hand: webhooks triggering n8n and Make scenarios, own Python scripts and WordPress PHP plugins I wrote as the data source. I used it at Raiola to extract content in bulk and feed a RAG and fine-tuning system.'),
+    desc: L('Automatizaciones que conectan plataformas sin tener que tocarlas a mano: webhooks que lanzan escenarios en n8n y Make, scripts de Python y plugins de WordPress en PHP hechos por mí como fuente de datos. Lo usé en Raiola para extraer contenido en masa y alimentar un sistema de RAG y fine-tuning.',
+            'Automations that connect platforms without touching them by hand: webhooks that trigger n8n and Make scenarios, Python scripts and WordPress PHP plugins I wrote as the data source. I used them at Raiola to pull content in bulk and feed a RAG and fine-tuning system.'),
     tech: [L('Webhooks y APIs REST como pegamento entre WordPress, YouTube, Make.com y n8n.', 'Webhooks and REST APIs as glue between WordPress, YouTube, Make.com and n8n.'),
            L('Pipelines de datos con Python: ingesta, transformación y sincronización.', 'Data pipelines in Python: ingestion, transformation and syncing.'),
            L('IA para normalizar el corpus de entrenamiento antes del fine-tuning.', 'AI to normalise the training corpus before fine-tuning.')],
