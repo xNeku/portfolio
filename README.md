@@ -1,85 +1,85 @@
-# Portfolio de Nicolás Díaz Ulloa
+# Nicolás Díaz Ulloa - Portfolio
 
-Web: **https://xneku.github.io/portfolio/**
+Live site: **https://xneku.github.io/portfolio/**
 
-Portfolio personal con dos formas de recorrerlo:
+Personal portfolio with two ways to explore it:
 
-- **Escritorio:** un pequeño mundo que se explora con las teclas W, A, S, D. Cada zona (juegos, IA y apps, redes y sistemas, experiencia, stack) se abre acercándote y pulsando E.
-- **Móvil:** un carrusel por secciones que se desliza con el dedo.
+- **Desktop:** a small world you walk around with W, A, S, D. Each zone (games, AI and apps, networks and systems, experience, stack) opens when you get close and press E.
+- **Mobile:** a swipeable carousel of sections.
 
-La web está en español e inglés (botón del globo en escritorio, botón ES/EN en móvil).
+The site is available in Spanish and English (globe button on desktop, ES/EN button on mobile).
 
-## Qué contiene
+## What it contains
 
-- Perfil: desarrollo de videojuegos, IA y agentes, redes y sistemas.
-- Experiencia: Cotelsa (técnico de redes), Universidad de Oviedo e internship en Raiola Networks.
-- Juegos: todos los de mi GitHub, con concepto y apartado técnico en los tres principales.
-- IA y automatización: orquestación de agentes, n8n, Make, webhooks, visión por computador.
-- Apps y web: SmarTrack, GamHub, PokeRat y otras.
-- Redes y sistemas: lo que hago en planta con Cisco industrial, Linux y automatización.
+- Profile: game development, AI and agents, networks and systems.
+- Experience: Cotelsa (network technician), University of Oviedo and an internship at Raiola Networks.
+- Games: every game on my GitHub, with concept and technical details for the three main ones.
+- AI and automation: agent orchestration, n8n, Make, webhooks, computer vision.
+- Apps and web: SmarTrack, GamHub, PokeRat and others.
+- Networks and systems: industrial Cisco, Linux and automation work done on the plant floor.
 
-## Tecnologías
+## Tech stack
 
-React 19, Vite 7, Tailwind CSS 4, Framer Motion y lucide-react. Servido con Nginx en Docker o con GitHub Pages.
+React 19, Vite 7, Tailwind CSS 4, Framer Motion and lucide-react. Served with Nginx in Docker or with GitHub Pages.
 
-## Ejecutarlo en local
+## Run it locally
 
-Requiere Node.js 20 o superior.
+Requires Node.js 20 or newer.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Se abre en http://localhost:5173/portfolio/ (la ruta `/portfolio/` es la base configurada en `vite.config.js`).
+It opens at http://localhost:5173/portfolio/ (`/portfolio/` is the base path set in `vite.config.js`).
 
-Para generar la versión de producción y probarla:
+To build the production version and try it:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Cómo cambiar el contenido
+## Changing the content
 
-Todo el texto y los datos están en `src/data.js`, en español e inglés:
+All text and data live in `src/data.js`, in Spanish and English:
 
-- `PHOTO_URL`: foto del perfil. El archivo va en `public/`.
-- `CONTENT`: textos del perfil, experiencia, redes y sistemas, stack y apartado "por qué yo".
-- `PROJECTS`: lista de proyectos. Cada uno tiene grupo (`games`, `ai`, `apps`), estado, descripción, apartado técnico (`tech`), tecnologías, repositorio y capturas (`media`). Los marcados con `featured: true` salen primero.
+- `PHOTO_URL`: profile photo. The file goes in `public/`.
+- `CONTENT`: profile, experience, networks and systems, stack and "why me" texts.
+- `PROJECTS`: project list. Each one has a group (`games`, `ai`, `apps`), status, description, technical section (`tech`), technologies, repository and screenshots (`media`). Projects with `featured: true` are shown first.
 
-La lógica y el diseño están en `src/App.jsx`.
+Logic and layout are in `src/App.jsx`.
 
-## Despliegue
+## Deployment
 
 ### GitHub Pages
 
-El workflow `.github/workflows/deploy.yml` compila y publica la web cada vez que se hace push a `main`.
+The workflow `.github/workflows/deploy.yml` builds and publishes the site on every push to `main`.
 
-Para que funcione, en el repositorio hay que ir a **Settings > Pages** y poner **Source: GitHub Actions**. Si está en "Deploy from a branch", GitHub publica el `index.html` del código fuente en lugar del build y la página sale en blanco.
+For it to work, go to the repository **Settings > Pages** and set **Source: GitHub Actions**. If it is set to "Deploy from a branch", GitHub publishes the source `index.html` instead of the build and the page is blank.
 
-### Docker y VPS
+### Docker and VPS
 
 ```bash
 docker-compose up -d
 ```
 
-La web queda en http://localhost:8085. Para desplegar en un servidor propio hay más detalle en `DEPLOYMENT_GUIDE.md`, y `deploy.sh` automatiza el proceso.
+The site is then available at http://localhost:8085. More detail on deploying to your own server is in `DEPLOYMENT_GUIDE.md`, and `deploy.sh` automates the process.
 
-## Estructura
+## Structure
 
 ```
 src/
-  App.jsx        Mundo de escritorio, carrusel móvil y componentes
-  data.js        Textos, proyectos y enlaces (ES/EN)
+  App.jsx        Desktop world, mobile carousel and components
+  data.js        Texts, projects and links (ES/EN)
   hooks/         useWindowSize
-public/          Foto, capturas e iconos
-Dockerfile       Build y servido con Nginx
-nginx.conf       Configuración de Nginx
-.github/         Workflow de GitHub Pages
+public/          Photo, screenshots and icons
+Dockerfile       Build and serve with Nginx
+nginx.conf       Nginx configuration
+.github/         GitHub Pages workflow
 ```
 
-## Contacto
+## Contact
 
 - GitHub: https://github.com/xNeku
 - LinkedIn: https://www.linkedin.com/in/nicolás-díaz-ulloa-5398b9314/
