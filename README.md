@@ -1,139 +1,86 @@
-# 🎨 Portfolio - React + Vite
+# Portfolio de Nicolás Díaz Ulloa
 
-Portfolio personal desarrollado con React 19, Vite y Tailwind CSS.
+Web: **https://xneku.github.io/portfolio/**
 
-## 🚀 Quick Start
+Portfolio personal con dos formas de recorrerlo:
 
-### Desarrollo Local
+- **Escritorio:** un pequeño mundo que se explora con las teclas W, A, S, D. Cada zona (juegos, IA y apps, redes y sistemas, experiencia, stack) se abre acercándote y pulsando E.
+- **Móvil:** un carrusel por secciones que se desliza con el dedo.
+
+La web está en español e inglés (botón del globo en escritorio, botón ES/EN en móvil).
+
+## Qué contiene
+
+- Perfil: desarrollo de videojuegos, IA y agentes, redes y sistemas.
+- Experiencia: Cotelsa (técnico de redes), Universidad de Oviedo e internship en Raiola Networks.
+- Juegos: todos los de mi GitHub, con concepto y apartado técnico en los tres principales.
+- IA y automatización: orquestación de agentes, n8n, Make, webhooks, visión por computador.
+- Apps y web: SmarTrack, GamHub, PokeRat y otras.
+- Redes y sistemas: lo que hago en planta con Cisco industrial, Linux y automatización.
+
+## Tecnologías
+
+React 19, Vite 7, Tailwind CSS 4, Framer Motion y lucide-react. Servido con Nginx en Docker o con GitHub Pages.
+
+## Ejecutarlo en local
+
+Requiere Node.js 20 o superior.
 
 ```bash
-# Instalar dependencias
 npm install
-
-# Iniciar servidor de desarrollo
 npm run dev
-
-# Accesible en http://localhost:5173
 ```
 
-### Compilación para Producción
+Se abre en http://localhost:5173/portfolio/ (la ruta `/portfolio/` es la base configurada en `vite.config.js`).
+
+Para generar la versión de producción y probarla:
 
 ```bash
-# Compilar proyecto
 npm run build
-
-# Previsualizar build (opcional)
 npm run preview
-
-# Los archivos compilados están en /dist
 ```
 
-## 📁 Estructura del Proyecto
+## Cómo cambiar el contenido
 
-```
-portfolio/
-├── src/
-│   ├── main.jsx          # Punto de entrada React
-│   ├── App.jsx           # Componente principal
-│   ├── index.css         # Estilos globales
-│   └── assets/           # Imágenes y recursos
-├── public/               # Archivos estáticos
-├── dist/                 # Build compilado (generado)
-├── index.html            # HTML principal
-├── package.json          # Dependencias
-├── vite.config.js        # Configuración Vite
-├── tailwind.config.js    # Configuración Tailwind
-├── postcss.config.js     # Configuración PostCSS
-├── Dockerfile            # Configuración Docker
-├── docker-compose.yml    # Orquestación Docker
-├── nginx.conf            # Configuración Nginx
-└── DEPLOYMENT_GUIDE.md   # Guía de despliegue
-```
+Todo el texto y los datos están en `src/data.js`, en español e inglés:
 
-## 🛠 Stack Tecnológico
+- `PHOTO_URL`: foto del perfil. El archivo va en `public/`.
+- `CONTENT`: textos del perfil, experiencia, redes y sistemas, stack y apartado "por qué yo".
+- `PROJECTS`: lista de proyectos. Cada uno tiene grupo (`games`, `ai`, `apps`), estado, descripción, apartado técnico (`tech`), tecnologías, repositorio y capturas (`media`). Los marcados con `featured: true` salen primero.
 
-- **React 19** - Framework UI
-- **Vite 7** - Build tool y dev server
-- **Tailwind CSS 4** - Utilidades de estilos
-- **Framer Motion** - Animaciones
-- **Lucide React** - Iconos
-- **Nginx** - Web server en producción
-- **Docker** - Containerización
+La lógica y el diseño están en `src/App.jsx`.
 
-## 📦 Dependencias Principales
+## Despliegue
 
-```json
-{
-  "react": "^19.2.0",
-  "react-dom": "^19.2.0",
-  "framer-motion": "^12.34.4",
-  "lucide-react": "^0.576.0",
-  "@tailwindcss/postcss": "^4.2.1"
-}
-```
+### GitHub Pages
 
-## 🐳 Despliegue con Docker
+El workflow `.github/workflows/deploy.yml` compila y publica la web cada vez que se hace push a `main`.
 
-### Build local
-```bash
-docker build -t portfolio:latest .
-```
+Para que funcione, en el repositorio hay que ir a **Settings > Pages** y poner **Source: GitHub Actions**. Si está en "Deploy from a branch", GitHub publica el `index.html` del código fuente en lugar del build y la página sale en blanco.
 
-### Ejecutar localmente
+### Docker y VPS
+
 ```bash
 docker-compose up -d
-# Accesible en http://localhost:8085
 ```
 
-### Logs
-```bash
-docker-compose logs -f
+La web queda en http://localhost:8085. Para desplegar en un servidor propio hay más detalle en `DEPLOYMENT_GUIDE.md`, y `deploy.sh` automatiza el proceso.
+
+## Estructura
+
+```
+src/
+  App.jsx        Mundo de escritorio, carrusel móvil y componentes
+  data.js        Textos, proyectos y enlaces (ES/EN)
+  hooks/         useWindowSize
+public/          Foto, capturas e iconos
+Dockerfile       Build y servido con Nginx
+nginx.conf       Configuración de Nginx
+.github/         Workflow de GitHub Pages
 ```
 
-### Detener
-```bash
-docker-compose down
-```
+## Contacto
 
-## 🌐 Despliegue en VPS
-
-Ver [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) para instrucciones completas.
-
-### Despliegue rápido:
-```bash
-chmod +x deploy.sh
-./deploy.sh
-```
-
-El script automáticamente:
-- Compila la imagen Docker
-- Transfiere archivos al VPS (79.137.45.35)
-- Inicia los contenedores
-- Verifica que esté funcionando
-
-## ✅ Pre-despliegue Checklist
-
-Ver [DEPLOYMENT_CHECKLIST.md](./DEPLOYMENT_CHECKLIST.md) para verificar todos los puntos antes de compartir con empresas.
-
-## 🔒 Seguridad
-
-- ✓ Headers de seguridad configurados en nginx
-- ✓ Gzip compression habilitado
-- ✓ Cache estratégico para assets
-- ✓ HTTPS con Let's Encrypt (en producción)
-- ✓ SPA routing configurado
-
-## 📊 Optimizaciones de Producción
-
-- ✓ Tree-shaking habilitado
-- ✓ Code splitting por vendor
-- ✓ Minificación con Terser
-- ✓ Source maps deshabilitados
-- ✓ Console.log removido en build
-- ✓ Imágenes optimizadas
-
-
----
-
-**Última actualización:** Junio 2026
-**Versión:** 1.0.0
+- GitHub: https://github.com/xNeku
+- LinkedIn: https://www.linkedin.com/in/nicolás-díaz-ulloa-5398b9314/
+- Email: nicodzu@gmail.com
