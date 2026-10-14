@@ -45,6 +45,7 @@ const STATUS_STYLE = {
   live: 'text-emerald-400 border-emerald-400/30',
   done: 'text-emerald-400 border-emerald-400/30',
   beta: 'text-violet-300 border-violet-300/30',
+  used: 'text-emerald-400 border-emerald-400/30',
 };
 
 const SOCIAL_VIEW = {
@@ -142,8 +143,18 @@ function ProjectBrowser({ lang, groups, palette, compact }) {
           <StatusBadge status={selected.status} ui={ui} />
           <span className="px-3 py-1 border border-white/10 text-white/50 text-[9px] font-bold rounded-full uppercase tracking-widest bg-white/5">{selected.category}</span>
         </div>
-        <h2 className={`font-black italic tracking-tighter leading-[0.9] uppercase text-white ${compact ? 'text-3xl' : 'text-4xl md:text-6xl'}`}>{selected.title}</h2>
+        <h2 className={`font-black italic tracking-tighter leading-[0.9] uppercase text-white ${compact ? 'text-2xl' : 'text-4xl md:text-6xl'}`}>{selected.title}</h2>
         <p className={`text-white/70 font-light leading-relaxed ${compact ? 'text-sm' : 'text-base md:text-lg'}`}>{tr(selected.desc, lang)}</p>
+        {selected.tech && (
+          <div className="w-full text-left">
+            <h3 className={`text-[10px] font-black uppercase tracking-[0.4em] mb-3 ${p.title}`}>{ui.tech}</h3>
+            <ul className="flex flex-col gap-2 list-disc pl-5 marker:text-white/30">
+              {selected.tech.map((t, i) => (
+                <li key={i} className={`text-white/75 leading-relaxed ${compact ? 'text-xs' : 'text-sm md:text-base'}`}>{tr(t, lang)}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {selected.media.length > 0 && (
           <div className="w-full flex flex-col gap-3">
@@ -177,7 +188,7 @@ function ProjectBrowser({ lang, groups, palette, compact }) {
             </a>
           )}
           {selected.repo && (
-            <a href={`${GH}/${selected.repo}`} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 px-6 py-3 border font-black text-[10px] rounded-full uppercase tracking-widest transition-all ${p.btn}`}>
+            <a href={selected.branch ? `${GH}/${selected.repo}/tree/${selected.branch}` : `${GH}/${selected.repo}`} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 px-6 py-3 border font-black text-[10px] rounded-full uppercase tracking-widest transition-all ${p.btn}`}>
               <Github size={16} /> {ui.repo}
             </a>
           )}
@@ -223,6 +234,7 @@ function ProjectBrowser({ lang, groups, palette, compact }) {
               <h4 className={`font-black italic uppercase tracking-wider truncate group-hover:text-white ${p.title} ${compact ? 'text-sm' : 'text-base md:text-xl'}`}>{proj.title}</h4>
               <StatusBadge status={proj.status} ui={ui} small />
             </div>
+            {proj.featured && <span className="inline-block mb-1 text-[8px] font-black uppercase tracking-widest text-amber-300">★ {ui.featured}</span>}
             <p className={`text-white/50 ${compact ? 'text-xs' : 'text-xs md:text-sm'}`}>{tr(proj.short, lang)}</p>
           </div>
         </button>
@@ -396,7 +408,7 @@ function DesktopMode() {
                 {poi.type === 'profile' ? (
                   <div className="flex flex-col items-center p-4 md:p-6 w-full h-full justify-between relative z-10">
                     <div className="w-24 h-24 md:w-36 md:h-36 rounded-full border-4 border-emerald-500/30 bg-emerald-950/30 overflow-hidden relative shadow-[0_0_30px_rgba(16,185,129,0.2)]">
-                      <img src={PHOTO_URL} alt="Nicolás Díaz Ulloa" className="w-full h-full object-cover scale-125" />
+                      <img src={PHOTO_URL} alt="Nicolás Díaz Ulloa" className="w-full h-full object-cover object-[50%_35%]" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
                     </div>
                     <h1 className="text-xl md:text-3xl font-black italic tracking-tighter leading-none text-center uppercase break-words px-2 text-emerald-400 drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]">{poi.title}</h1>
@@ -535,7 +547,7 @@ function MobileMode() {
         <Section scroll>
           <div className="flex flex-col items-center gap-5 text-center">
             <div className="w-28 h-28 rounded-full border-4 border-emerald-500/50 bg-emerald-950/30 overflow-hidden relative shadow-[0_0_30px_rgba(16,185,129,0.2)]">
-              <img src={PHOTO_URL} alt="Nicolás Díaz Ulloa" className="w-full h-full object-cover scale-125" />
+              <img src={PHOTO_URL} alt="Nicolás Díaz Ulloa" className="w-full h-full object-cover object-[50%_35%]" />
             </div>
             <div>
               <h1 className="text-4xl font-black italic tracking-tighter mb-2 text-emerald-400 drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]">NICOLÁS</h1>

@@ -4,7 +4,7 @@
 export const GH = 'https://github.com/xNeku';
 
 // Cambia aquí la foto (poner el archivo nuevo en /public y apuntar a él)
-export const PHOTO_URL = './NICO.png';
+export const PHOTO_URL = './NICO.jpg';
 
 export const SOCIALS_DATA = [
   { id: 'github', url: GH, title: 'GitHub' },
@@ -17,17 +17,17 @@ export const UI = {
     close: 'Cerrar [E]', navigation: 'Navegación', interact: 'Interactuar / Cerrar',
     connect: 'CONECTAR CON', openLink: 'ABRIR ENLACE:', back: 'Volver', repo: 'Ver en GitHub',
     live: 'Probar en vivo', swipe: 'Desliza', language: 'Idioma', noFile: 'Sin archivo',
-    closeHint: 'Presiona ESC o click fuera para cerrar', all: 'Todos',
-    status: { playable: 'Jugable', wip: 'En desarrollo', proto: 'Prototipo', live: 'En vivo', done: 'Completado', beta: 'Beta' },
-    groups: { games: 'Juegos', ai: 'IA y visión', apps: 'Apps y web', systems: 'Redes y sistemas' },
+    closeHint: 'Presiona ESC o click fuera para cerrar', all: 'Todos', featured: 'Destacado', tech: 'Apartado técnico', concept: 'Concepto',
+    status: { used: 'En uso', playable: 'Jugable', wip: 'En desarrollo', proto: 'Prototipo', live: 'En vivo', done: 'Completado', beta: 'Beta' },
+    groups: { games: 'Juegos', ai: 'IA y automatización', apps: 'Apps y web', systems: 'Redes y sistemas' },
   },
   en: {
     close: 'Close [E]', navigation: 'Navigation', interact: 'Interact / Close',
     connect: 'CONNECT WITH', openLink: 'OPEN LINK:', back: 'Back', repo: 'View on GitHub',
     live: 'Try it live', swipe: 'Swipe', language: 'Language', noFile: 'No file',
-    closeHint: 'Press ESC or click outside to close', all: 'All',
-    status: { playable: 'Playable', wip: 'In development', proto: 'Prototype', live: 'Live', done: 'Completed', beta: 'Beta' },
-    groups: { games: 'Games', ai: 'AI & vision', apps: 'Apps & web', systems: 'Networks & systems' },
+    closeHint: 'Press ESC or click outside to close', all: 'All', featured: 'Featured', tech: 'Technical side', concept: 'Concept',
+    status: { used: 'In use', playable: 'Playable', wip: 'In development', proto: 'Prototype', live: 'Live', done: 'Completed', beta: 'Beta' },
+    groups: { games: 'Games', ai: 'AI & automation', apps: 'Apps & web', systems: 'Networks & systems' },
   },
 };
 
@@ -39,8 +39,8 @@ export const CONTENT = {
       'Técnico de redes en una planta industrial de ALCOA y, fuera de horas, desarrollador de videojuegos y de apps con IA. ' +
       'Estudio los últimos créditos de Ingeniería Informática (Universidad de Oviedo). Configuro switches y puntos de acceso Cisco industriales por el día ' +
       'y por la noche monto juegos en Godot, Unity y C++, automatizaciones y prototipos de visión por computador, todo en repositorios públicos (35+) ' +
-      'y desplegado en mi propio VPS. Aprendo rápido, depuro con paciencia y trabajo cómodo dirigiendo agentes de IA como parte del flujo normal.',
-    hero_tags: ['Godot', 'Unity', 'C++', 'IA / Agentes', 'Redes Cisco', 'Linux / VPS'],
+      'y desplegado en mi propio VPS. Aprendo rápido, depuro con paciencia y orquesto agentes de IA en mi flujo diario: varias sesiones con roles distintos, reglas en el repo y validación automática antes de cada merge.',
+    hero_tags: ['Godot', 'Unity', 'C++', 'Agentes de IA', 'Orquestación', 'Automatización', 'Redes Cisco', 'Linux / VPS'],
 
     experience_title: 'EXPERIENCIA',
     experience_subtitle: 'Trabajo y prácticas',
@@ -89,7 +89,7 @@ export const CONTENT = {
     stack_subtitle: 'Tecnologías y herramientas',
     stack: [
       { name: 'VIDEOJUEGOS', list: 'Godot 4 (GDScript, multijugador ENet/RPC), Unity (C#), C++17/20 con raylib, diseño de sistemas y herramientas de nivel.' },
-      { name: 'IA', list: 'Agentes de código (Claude Code, Codex, Cursor), prompt engineering, RAG y fine-tuning, visión por computador (OpenCV, MediaPipe).' },
+      { name: 'IA', list: 'Orquestación de agentes de código (Claude Code, Codex, Cursor) con roles separados, flujos agénticos, automatización (n8n, Make, webhooks), RAG y fine-tuning, visión por computador (OpenCV, MediaPipe).' },
       { name: 'WEB Y APPS', list: 'React, TypeScript, Three.js, Tailwind, Flutter, SwiftUI, PHP/WordPress (plugins propios), Appwrite, PocketBase.' },
       { name: 'REDES', list: 'Cisco industrial, VLAN, Wi-Fi corporativo, TCP/IP, troubleshooting.' },
       { name: 'BACKEND Y DATOS', list: 'Python, Java/Spring Boot, SQL, Node/Express, n8n y Make.com.' },
@@ -106,7 +106,7 @@ export const CONTENT = {
     why_content:
       'Entiendo la red industrial y también sé programar el software que la rodea. ' +
       'Aprendo rápido (varios motores y lenguajes en proyectos reales), busco la causa de los fallos en lugar de parchearlos y me gusta trabajar en equipo. ' +
-      'Me muevo bien con la IA como herramienta de trabajo: sé dirigirla, revisar lo que genera y detectar cuándo se equivoca. ' +
+      'Sé orquestar agentes de IA como herramienta de trabajo: darles roles, ponerles reglas, revisar lo que generan y detectar cuándo se equivocan. ' +
       'Disponible para trabajo remoto o presencial en Galicia, Asturias y Madrid.',
     why_tags: ['Resolutivo', 'Aprendo rápido', 'Trabajo en equipo', 'Proactivo', 'Polifacético'],
   },
@@ -117,8 +117,8 @@ export const CONTENT = {
       'Network technician at an ALCOA industrial plant and, off the clock, a game developer and AI app builder. ' +
       'Finishing my Computer Engineering degree (University of Oviedo). By day I configure industrial Cisco switches and access points; ' +
       'by night I build games in Godot, Unity and C++, automations and computer vision prototypes, all in public repositories (35+) ' +
-      'and deployed on my own VPS. I learn fast, debug patiently, and I am comfortable directing AI coding agents as part of my normal workflow.',
-    hero_tags: ['Godot', 'Unity', 'C++', 'AI / Agents', 'Cisco networks', 'Linux / VPS'],
+      'and deployed on my own VPS. I learn fast, debug patiently, and I orchestrate AI agents in my daily workflow: several sessions with different roles, rules in the repo and automatic validation before every merge.',
+    hero_tags: ['Godot', 'Unity', 'C++', 'AI agents', 'Orchestration', 'Automation', 'Cisco networks', 'Linux / VPS'],
 
     experience_title: 'EXPERIENCE',
     experience_subtitle: 'Work and internships',
@@ -167,7 +167,7 @@ export const CONTENT = {
     stack_subtitle: 'Technologies & tools',
     stack: [
       { name: 'GAME DEV', list: 'Godot 4 (GDScript, ENet/RPC multiplayer), Unity (C#), C++17/20 with raylib, systems design and level tooling.' },
-      { name: 'AI', list: 'Coding agents (Claude Code, Codex, Cursor), prompt engineering, RAG and fine-tuning, computer vision (OpenCV, MediaPipe).' },
+      { name: 'AI', list: 'Orchestration of coding agents (Claude Code, Codex, Cursor) with separate roles, agentic workflows, automation (n8n, Make, webhooks), RAG and fine-tuning, computer vision (OpenCV, MediaPipe).' },
       { name: 'WEB & APPS', list: 'React, TypeScript, Three.js, Tailwind, Flutter, SwiftUI, PHP/WordPress (own plugins), Appwrite, PocketBase.' },
       { name: 'NETWORKING', list: 'Industrial Cisco, VLANs, enterprise Wi-Fi, TCP/IP, troubleshooting.' },
       { name: 'BACKEND & DATA', list: 'Python, Java/Spring Boot, SQL, Node/Express, n8n and Make.com.' },
@@ -184,7 +184,7 @@ export const CONTENT = {
     why_content:
       'I understand industrial networking and I can also write the software around it. ' +
       'I learn fast (several engines and languages in real projects), I look for the cause of a fault instead of patching it, and I like working in a team. ' +
-      'I am good with AI as a working tool: I know how to direct it, review what it produces and tell when it is wrong. ' +
+      'I know how to orchestrate AI agents as a working tool: give them roles and rules, review what they produce and tell when they are wrong. ' +
       'Available remote or on-site in Galicia, Asturias and Madrid.',
     why_tags: ['Problem solver', 'Fast learner', 'Team player', 'Proactive', 'Polymath'],
   },
@@ -196,12 +196,19 @@ const L = (es, en) => ({ es, en });
 export const PROJECTS = [
   // ---------- JUEGOS ----------
   {
-    id: 'dopaminelord', group: 'games', title: 'DopamineLord', status: 'wip', category: 'Godot 4.7',
-    short: L('ARPG isométrico 2D: builds y loot tipo Diablo 2, mundos por semilla tipo Terraria.',
-             '2D isometric ARPG: Diablo 2 style builds and loot, Terraria style seeded worlds.'),
-    desc: L('ARPG isométrico 2D en Godot que mezcla builds, loot y árbol de habilidades de Diablo 2 con mundos por semilla, bosses y progresión por hitos de Terraria. Coop de hasta 4 jugadores y mando desde el principio. El diseño completo y las decisiones viven en documentos dentro del repo.',
-            '2D isometric ARPG in Godot mixing Diablo 2 builds, loot and skill tree with Terraria style seeded worlds, bosses and milestone progression. Up to 4-player co-op and controller support from day one. Full design and decisions are documented in the repo.'),
-    stack: ['Godot 4', 'GDScript', 'Co-op', 'Game design'], repo: 'DopamineLord', icon: './priesto.png', media: [{ type: 'image', url: './priesto.png' }],
+    id: 'dopaminelord', group: 'games', featured: true, title: 'DopamineLord', status: 'wip', category: 'Godot 4.7 · ARPG coop',
+    short: L('ARPG isométrico 2D: builds y loot tipo Diablo 2, mundos por semilla y coop tipo Terraria.',
+             '2D isometric ARPG: Diablo 2 builds and loot, Terraria style seeded worlds and co-op.'),
+    desc: L('ARPG 2D isométrico que mezcla Diablo 2 (builds, árbol de habilidades, loot y grindeo) con Terraria (mundo generado por semilla, bosses invocables, coop con amigos). Cada jugador crea un mundo y lo comparte; los personajes son independientes del mundo. Mundo en anillos de biomas con dificultad creciente y tres ramas de combate (Melee, Rango, Magia) con especializaciones a los niveles 25, 50 y 75, gemas con shaders y crafting. Diseño, arte y sistemas en solitario, con IA como asistente de código.',
+            '2D isometric ARPG mixing Diablo 2 (builds, skill tree, loot and grinding) with Terraria (seeded world, summonable bosses, co-op with friends). Each player creates and shares a world; characters are independent from the world. World in biome rings of rising difficulty and three combat branches (Melee, Ranged, Magic) with specialisations at levels 25, 50 and 75, shader gems and crafting. Design, art and systems solo, with AI as coding assistant.'),
+    tech: [L('Hordas: pensado para cientos de mobs y proyectiles. Los mobs pasan de nodos con físicas a objetos de datos gestionados por un MobManager, con separación mediante rejilla espacial repartida en 3 fases por tick.', 'Hordes: built for hundreds of mobs and projectiles. Mobs go from physics nodes to data objects handled by a MobManager, with separation through a spatial grid spread over 3 phases per tick.'),
+           L('Render en bloque: mobs y proyectiles dibujados con MultiMesh y shader propio, solo los visibles.', 'Batched rendering: mobs and projectiles drawn with MultiMesh and a custom shader, only the visible ones.'),
+           L('Medido (400 mobs + 200 proyectiles, 60 fps fijos): CPU por frame de 8,7 a 6,6 ms, llamadas de dibujo de ~2.300 a ~150-340 y dibujado de proyectiles de 3,5-4,6 a 0,2 ms.', 'Measured (400 mobs + 200 projectiles, fixed 60 fps): CPU per frame from 8.7 to 6.6 ms, draw calls from ~2,300 to ~150-340 and projectile drawing from 3.5-4.6 to 0.2 ms.'),
+           L('Profiling propio: panel de métricas en tiempo real y modo estrés por teclado y línea de comandos (--stress-mobs, --stress-proj).', 'Own profiling: real-time metrics panel and stress mode from keyboard and command line (--stress-mobs, --stress-proj).'),
+           L('Coop de hasta 4 con host autoritativo sobre mobs, loot y daño; cada cliente controla su movimiento. Solo viajan eventos, no estado por frame; los mobs se envían por cliente solo si están cerca, en paquetes bajo el MTU, y los daños se agrupan.', 'Up to 4-player co-op with an authoritative host over mobs, loot and damage; each client controls its own movement. Only events travel, not per-frame state; mobs are sent per client only when nearby, in packets under the MTU, and damage is batched.'),
+           L('Diseño data-driven: ítems, mobs, skills y gemas definidos por datos con ID. Lógica separada de lo visual y del input (el input son órdenes), con mando y teclado desde el principio.', 'Data-driven design: items, mobs, skills and gems defined as data with IDs. Logic separated from visuals and input (input is orders), gamepad and keyboard from the start.'),
+           L('Salto propio: la lógica vive en el suelo y la altura se dibuja solo en el sprite, con las paredes bloqueando el salto.', 'Own jump mechanic: logic lives on the ground and height is drawn only on the sprite, with walls blocking the jump.')],
+    stack: ['Godot 4.7', 'GDScript', 'MultiMesh', 'Spatial grid', 'Authoritative host', 'Profiling'], repo: 'DopamineLord', branch: 'fase-7-rendimiento', icon: null, media: [],
   },
   {
     id: 'fishmaboolla', group: 'games', title: 'Fishmaboolla', status: 'wip', category: 'Godot',
@@ -212,12 +219,34 @@ export const PROJECTS = [
     stack: ['Godot 4', 'GDScript', 'Roguelike', 'Data-driven'], repo: 'fishmaboolla', icon: null, media: [],
   },
   {
-    id: 'godot-mp', group: 'games', title: 'Godot Multiplayer Arena', status: 'playable', category: 'Godot 4 · Multiplayer',
-    short: L('Arena 2D en red con lobby, clases, armas y habilidades (ENet, RPC).',
-             'Networked 2D arena with lobby, classes, weapons and abilities (ENet, RPC).'),
-    desc: L('Prototipo de arena 2D en red con la API multijugador de alto nivel de Godot 4 (ENet). Flujo host/cliente con sala y desconexiones, control por autoridad y sincronización remota, sistema de clases y armas con recursos de datos, disparo, gadgets arrojadizos, habilidades con cooldown y puntuación.',
-            'Networked 2D arena prototype using Godot 4 high-level multiplayer (ENet). Host/client flow with rooms and disconnect handling, authority-based control and remote sync, class and weapon data resources, shooting, throwable gadgets, cooldown abilities and scoring.'),
-    stack: ['Godot 4', 'ENet', 'RPC', 'GDScript'], repo: 'godot-multiplayer-high-level', icon: null, media: [],
+    id: 'clerigo-rl', group: 'games', featured: true, title: 'Clérigo Roguelike', status: 'wip', category: 'Godot 4.7 · Roguelike',
+    short: L('Roguelike isométrico: un clérigo expulsado sube de la mazmorra al cielo buscando venganza.',
+             'Isometric roguelike: an excommunicated cleric climbs from the dungeon to heaven seeking revenge.'),
+    desc: L('Roguelike 2D isométrico para un jugador. Un clérigo expulsado de la Iglesia sube desde una mazmorra hasta el cielo y se enfrenta a figuras religiosas corrompidas: curas, monjas, paladines y ángeles. Disparo automático al enemigo más cercano, salto y un sistema de magias y buffs combinables estilo puzle. Estética pixel art: la oscuridad de Diablo 2 Resurrected con la sencillez cartoon de The Binding of Isaac. Objetivo: Windows y Mac.',
+            'Single-player 2D isometric roguelike. A cleric expelled from the Church climbs from a dungeon to heaven and fights corrupted religious figures: priests, nuns, paladins and angels. Auto-fire at the nearest enemy, jumping and a puzzle-like system of combinable spells and buffs. Pixel art mixing the darkness of Diablo 2 Resurrected with the cartoon simplicity of The Binding of Isaac. Targets Windows and Mac.'),
+    tech: [L('Arquitectura 100% basada en escenas de Godot (nodos y propiedades reales, sin instanciar por código), pensada para escalar.', 'Fully scene-based Godot architecture (real nodes and properties, nothing instanced from code), built to scale.'),
+           L('Refactor completo de DopamineLord a un jugador: quité red, clases, skills y loot, y reconvertí Player, MobManager y ProjectileManager.', 'Full single-player refactor of DopamineLord: removed networking, classes, skills and loot, and reworked Player, MobManager and ProjectileManager.'),
+           L('Auto-disparo con selección del objetivo más cercano; personaje renderizado por piezas (cuerpo, cara, manos, pies) con sistema de expresiones.', 'Auto-fire with nearest-target selection; character rendered in parts (body, face, hands, feet) with an expression system.'),
+           L('Herramientas de rendimiento propias: overlay de métricas y modos de estrés por línea de comandos. Pruebas headless en CPU con 400 enemigos y 200 proyectiles a ~5-9 ms por tick de físicas.', 'Own performance tooling: metrics overlay and stress modes from the command line. Headless CPU tests with 400 enemies and 200 projectiles at ~5-9 ms per physics tick.'),
+           L('Validación automática en Godot headless (import y arranque sin errores) antes de cada push.', 'Automatic validation in headless Godot (import and boot without errors) before every push.'),
+           L('Pipeline de arte pixel art propio desde cero: toolkit de paletas, generadores de formas y sombreado.', 'Own pixel art pipeline built from scratch: palette toolkit, shape generators and shading.'),
+           L('Trabajo con IA en roles separados (sesión de código y sesión de dirección de arte) coordinadas por convenciones del repo; ramas por fase y merge manual a main. Desarrollo y pruebas desde Android (editor de Godot + Termux + git).', 'AI work with separate roles (a code session and an art-direction session) coordinated by repo conventions; one branch per phase and manual merge to main. Developed and tested from Android (Godot editor + Termux + git).')],
+    stack: ['Godot 4.7', 'GDScript', 'Pixel art', 'Headless CI', 'AI workflow'], repo: 'clerigo-roguelike', icon: './priesto.png', media: [{ type: 'image', url: './priesto.png' }],
+  },
+  {
+    id: 'flashracs', group: 'games', featured: true, title: 'FlashRacs', status: 'wip', category: 'Godot 4.7 · Online · nombre provisional',
+    short: L('Shooter 2D de sigilo online tipo Duck Game: solo ves tu propio haz de linterna.',
+             'Online 2D stealth shooter in the style of Duck Game: you only see your own flashlight beam.'),
+    desc: L('Shooter 2D de plataformas online en pixel art, tipo Duck Game pero de sigilo: cada jugador solo ve su propio haz de linterna, los demás no. Se premia el sonido, la táctica y la sorpresa; se puede campear o rushear. Hasta 8 jugadores (normalmente 4) en lobbies privados. Es mi juego más completo y el más cercano a salir; el objetivo es sacarlo en Steam. Estado: alpha, sin publicar.',
+            'Online 2D platformer shooter in pixel art, Duck Game style but stealth: every player only sees their own flashlight beam. Sound, tactics and surprise are rewarded; you can camp or rush. Up to 8 players (usually 4) in private lobbies. My most complete game and the closest to release; the goal is a Steam launch. Status: alpha, not published.'),
+    tech: [L('Multijugador online P2P con host autoritativo, un jugador por peer, pensado para integrar GodotSteam más adelante.', 'Online P2P multiplayer with an authoritative host, one player per peer, designed to integrate GodotSteam later.'),
+           L('Visión e iluminación dinámica: la linterna es la única visión del mapa; luces, bombillas y puertas interactúan con los objetos (por ejemplo un pulso que apaga luces y linternas en un radio).', 'Dynamic vision and lighting: the flashlight is the only view of the map; lights, bulbs and doors interact with items (for example a pulse that turns off lights and flashlights in a radius).'),
+           L('Armas y objetos: spawns fijos, un arma y un objeto a la vez, retroceso dinámico, trayectorias con previsualización, explosivos que destruyen el mapa, armas silenciadas frente a armas con fogonazo.', 'Weapons and items: fixed spawns, one weapon and one item at a time, dynamic recoil, trajectory preview, explosives that destroy the map, silenced versus flash weapons.'),
+           L('Puntería sin ratón como en Duck Game: ángulo continuo según orientación y estado del personaje, compatible con mando.', 'Mouse-free aiming like Duck Game: continuous angle based on facing and character state, gamepad compatible.'),
+           L('Rondas y puntuación (a 11 puntos) con rotación de mapas sin repetir hasta agotar la lista.', 'Rounds and scoring (to 11 points) with map rotation without repeats until the list runs out.'),
+           L('Editor de mapas web propio (FlashMapMaker) que exporta JSON; el juego los carga con un MapLoader. Pensado para abrirlo a la comunidad.', 'Own web map editor (FlashMapMaker) exporting JSON; the game loads maps with a MapLoader. Meant to be opened to the community.'),
+           L('Git/GitHub con ramas por fase y escenas montadas con nodos reales en el editor de Godot.', 'Git/GitHub with one branch per phase and scenes built with real nodes in the Godot editor.')],
+    stack: ['Godot 4.7', 'GDScript', 'ENet / RPC', 'Dynamic lighting', 'Map editor'], repo: 'godot-multiplayer-high-level', branch: 'escala-y-mapas', icon: null, media: [],
   },
   {
     id: 'flashmapmaker', group: 'games', title: 'FlashMapMaker', status: 'live', category: 'Level editor · Web',
@@ -236,7 +265,7 @@ export const PROJECTS = [
     stack: ['Unity', 'C#', 'Input System', 'Roguelike'], repo: 'RogueLikeWaw', icon: null, media: [],
   },
   {
-    id: 'clerigo', group: 'games', title: 'Clerigo', status: 'proto', category: 'Unity · C#',
+    id: 'clerigo', group: 'games', title: 'Clerigo FPS (Unity)', status: 'proto', category: 'Unity · C#',
     short: L('Combate en primera persona con melee y magia.', 'First-person combat with melee and magic.'),
     desc: L('Prototipo de clérigo en primera persona que combina ataque cuerpo a cuerpo (cooldown y raycast desde cámara) y magia a distancia con proyectiles. Movimiento con CharacterController, cámara con ratón, vida de enemigos con barra de UI y limpieza al morir.',
             'First-person cleric prototype combining melee (cooldown and camera raycast) and ranged magic with projectiles. CharacterController movement, mouse look, enemy health with UI bar and death cleanup.'),
@@ -294,6 +323,29 @@ export const PROJECTS = [
   },
 
   // ---------- IA Y VISIÓN ----------
+  {
+    id: 'agents', group: 'ai', featured: true, title: 'Orquestación de agentes', status: 'used', category: 'Agentic workflow',
+    short: L('Cómo trabajo: varios agentes de IA con roles separados, coordinados por convenciones del repo.',
+             'How I work: several AI agents with separate roles, coordinated by repo conventions.'),
+    desc: L('Mi forma de desarrollar mis juegos y apps: dirijo agentes de código en sesiones con roles distintos (por ejemplo una de código y otra de dirección de arte) y las coordino con convenciones dentro del repositorio. No es "pedirle cosas a un chat": hay reglas, validación automática y revisión mía antes de cada merge.',
+            'How I build my games and apps: I direct coding agents in sessions with different roles (for example one for code and another for art direction) and coordinate them through conventions inside the repository. It is not just asking a chat: there are rules, automatic validation and my own review before every merge.'),
+    tech: [L('Ficheros de reglas por repo (CLAUDE.md) y documentos de diseño con cada decisión marcada como DECIDIDO, PROPUESTA o ABIERTO, para que cada agente sepa qué es firme.', 'Per-repo rules files (CLAUDE.md) and design documents with every decision marked DECIDED, PROPOSED or OPEN, so each agent knows what is firm.'),
+           L('Validación automática en Godot headless (import y arranque sin errores) antes de cada push, y pruebas de estrés con métricas.', 'Automatic validation in headless Godot (import and error-free boot) before every push, plus stress tests with metrics.'),
+           L('Ramas por fase y merge manual a main: la IA propone, yo reviso y decido.', 'One branch per phase and manual merge to main: the AI proposes, I review and decide.'),
+           L('Herramientas: Claude Code, Codex y Cursor. Flujo completo también desde una tablet Android (Termux + git).', 'Tools: Claude Code, Codex and Cursor. Full workflow also from an Android tablet (Termux + git).')],
+    stack: ['Claude Code', 'Codex', 'Cursor', 'Multi-agent', 'CLAUDE.md', 'Headless CI'], repo: null, icon: null, media: [],
+  },
+  {
+    id: 'automation', group: 'ai', featured: true, title: 'Automatización con IA', status: 'used', category: 'n8n · Make · Webhooks',
+    short: L('Pipelines con n8n, Make.com, webhooks y Python que conectan sistemas y mueven datos solos.',
+             'Pipelines with n8n, Make.com, webhooks and Python that connect systems and move data on their own.'),
+    desc: L('Flujos de automatización que enlazan plataformas sin tocarlas a mano: webhooks que disparan escenarios en n8n y Make, scripts Python propios y plugins de WordPress en PHP hechos por mí como origen de los datos. Lo usé en Raiola para extraer contenido de forma masiva y alimentar un sistema RAG y de fine-tuning.',
+            'Automation flows that link platforms without touching them by hand: webhooks triggering n8n and Make scenarios, own Python scripts and WordPress PHP plugins I wrote as the data source. I used it at Raiola to extract content in bulk and feed a RAG and fine-tuning system.'),
+    tech: [L('Webhooks y APIs REST como pegamento entre WordPress, YouTube, Make.com y n8n.', 'Webhooks and REST APIs as glue between WordPress, YouTube, Make.com and n8n.'),
+           L('Pipelines de datos con Python: ingesta, transformación y sincronización.', 'Data pipelines in Python: ingestion, transformation and syncing.'),
+           L('IA para normalizar el corpus de entrenamiento antes del fine-tuning.', 'AI to normalise the training corpus before fine-tuning.')],
+    stack: ['n8n', 'Make.com', 'Webhooks', 'Python', 'REST APIs', 'WordPress/PHP'], repo: null, icon: null, media: [],
+  },
   {
     id: 'rag', group: 'ai', title: 'RAG + Fine-tuning', status: 'done', category: 'AI · Data pipeline',
     short: L('Sistema para replicar el estilo de comunicación de una dirección ejecutiva.',
@@ -370,3 +422,7 @@ export const PROJECTS = [
     stack: ['React 19', 'Vite', 'Tailwind 4', 'Framer Motion', 'Docker'], repo: 'portfolio', icon: null, media: [],
   },
 ];
+
+// Destacados primero y en este orden; el resto conserva el orden del archivo.
+const RANK = { flashracs: 0, 'clerigo-rl': 1, dopaminelord: 2, agents: 0, automation: 1 };
+PROJECTS.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || (RANK[a.id] ?? 0) - (RANK[b.id] ?? 0));
